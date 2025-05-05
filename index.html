@@ -1,12 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Checklist de Aptidão</title>
+    <meta charset="UTF-8">
+    <title>Checklist de Aptidão Diária</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        form { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        select, button { width: 100%; margin-top: 10px; padding: 8px; }
+    </style>
 </head>
 <body>
-  <h1>Formulário Funcionando!</h1>
-  <p>Esse formulário está sendo servido corretamente pelo Node.js e Express no Render.</p>
+    <form method="POST" action="/enviar">
+        <h2>Checklist de Aptidão Diária</h2>
+        <label>Nome do Colaborador:
+            <select name="nome">
+                <option value="">Selecione</option>
+                <option>João</option>
+                <option>Maria</option>
+                <option>Pedro</option>
+            </select>
+        </label>
+        <label>Você está se sentindo bem?
+            <select name="sentindo_bem">
+                <option>Sim</option><option>Não</option>
+            </select>
+        </label>
+        <label>Você ingeriu bebida alcoólica na noite anterior?
+            <select name="bebida">
+                <option>Sim</option><option>Não</option>
+            </select>
+        </label>
+        <label>Você está com sinais de sonolência?
+            <select name="sono">
+                <option>Sim</option><option>Não</option>
+            </select>
+        </label>
+        <label>Você se sente bem para trabalhar hoje?
+            <select name="apto">
+                <option>Sim</option><option>Não</option>
+            </select>
+        </label>
+        <button type="submit">Verificar</button>
+    </form>
 </body>
 </html>
